@@ -12,7 +12,7 @@
       <property name="javax.persistence.jdbc.password" value="sam04897"/>
       <property name="jakarta.persistence.validation.mode" value="auto"/>
 
-      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
       <property name="hibernate.cache.use_query_cache" value="false"/>
 
       <property name="hibernate.show_sql" value="true"/>
