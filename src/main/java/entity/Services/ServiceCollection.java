@@ -13,8 +13,12 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Service extends BaseEntity<Long> {
+public class ServiceCollection extends BaseEntity<Long> {
     String name;
     @OneToMany(mappedBy = "service")
-    List<SubService> subServices;
+    List<SubServiceCollection> subServices;
+
+    public ServiceCollection(String name) {
+        this.name = name;
+    }
 }
