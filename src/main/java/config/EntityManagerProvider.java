@@ -9,7 +9,7 @@ public class EntityManagerProvider {
     static final EntityManager em;
 
     static {
-        emf = Persistence.createEntityManagerFactory("loanSystem");
+        emf = Persistence.createEntityManagerFactory("finalProjectPhase1");
         em = emf.createEntityManager();
     }
     public static EntityManager getEntityManager(){
