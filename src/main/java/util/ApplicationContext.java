@@ -30,6 +30,10 @@ public class ApplicationContext {
     private static final SubServiceCollectionRepository subServiceCollectionRepository;
     private static final SubServiceCollectionService subServiceCollectionService;
 
+    private static final OrderRepository orderRepository;
+    private static final OrderService orderService;
+
+
 
 
 
@@ -52,6 +56,9 @@ public class ApplicationContext {
         serviceCollectionService= new ServiceCollectionServiceImpl(serviceCollectionRepository);
         subServiceCollectionRepository= new SubServiceCollectionRepositoryImpl(em);
         subServiceCollectionService= new SubServiceCollectionServiceImpl(subServiceCollectionRepository);
+        orderRepository = new OrderRepositoryImpl(em);
+        orderService = new OrderServiceImpl(orderRepository)
+
 
     }
 
@@ -74,6 +81,9 @@ public class ApplicationContext {
     }
     public static SubServiceCollectionService getSubServiceCollectionService(){
         return subServiceCollectionService;
+    }
+    public static OrderService getOrderService(){
+        return orderService;
     }
 
 }
