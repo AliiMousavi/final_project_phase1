@@ -31,4 +31,10 @@ public class Order extends BaseEntity<Long>{
     @OneToOne
     Offer offer;
 
+    public Order(int offerPrice, String workToDo, Date dateOfExecution, String address) {
+        this.offerPrice = offerPrice;
+        this.workToDo = workToDo;
+        DateOfExecution = dateOfExecution;
+        this.address = address;
+    }
 }
