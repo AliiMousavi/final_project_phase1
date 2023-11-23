@@ -18,7 +18,7 @@ import java.sql.Date;
 @NoArgsConstructor
 @Data
 @Table(name = "orders")
-public class Order extends BaseEntity<Long>{
+public class Order extends BaseEntity<Long> {
     int offerPrice;
     String workToDo;
     Date DateOfExecution;
@@ -31,10 +31,16 @@ public class Order extends BaseEntity<Long>{
     @OneToOne
     Offer offer;
 
-    public Order(int offerPrice, String workToDo, Date dateOfExecution, String address) {
-        this.offerPrice = offerPrice;
-        this.workToDo = workToDo;
-        DateOfExecution = dateOfExecution;
-        this.address = address;
-    }
+//    public Order(int offerPrice, String workToDo, Date dateOfExecution, String address, SubServiceCollection subServiceCollection) {
+//        if (offerPrice > subServiceCollection.getBasePrice())
+//            this.offerPrice = offerPrice;
+//        else
+//            throw new RuntimeException("offer PRice should bigger than basePrice");
+//
+//        this.workToDo = workToDo;
+//        DateOfExecution = dateOfExecution;
+//        this.address = address;
+//        this.orderStatus = OrderStatus.WAITING_FOR_THE_SUGGESTION_OF_EXPERTS;
+//        this.subServiceCollection = subServiceCollection;
+//    }
 }
