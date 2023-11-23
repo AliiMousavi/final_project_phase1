@@ -32,4 +32,23 @@ public class SubServiceCollection extends BaseEntity<Long> {
         this.basePrice = basePrice;
         this.caption = caption;
     }
+
+    @Override
+    public String toString() {
+        return "SubServiceCollection{" +
+                "name='" + name + '\'' +
+                ", service=" + service.getName() +
+                ", basePrice=" + basePrice +
+                ", caption='" + caption + '\'' +
+                ", Experts=" + Experts +
+                ", order=" + order +
+                '}';
+    }
+
+    public SubServiceCollection(String name, ServiceCollection service, int basePrice, String caption) {
+        this.name = name;
+        this.service = service;
+        this.basePrice = basePrice;
+        this.caption = caption;
+    }
 }
