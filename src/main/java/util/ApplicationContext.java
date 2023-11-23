@@ -57,7 +57,7 @@ public class ApplicationContext {
         subServiceCollectionRepository= new SubServiceCollectionRepositoryImpl(em);
         subServiceCollectionService= new SubServiceCollectionServiceImpl(subServiceCollectionRepository);
         orderRepository = new OrderRepositoryImpl(em);
-        orderService = new OrderServiceImpl(orderRepository)
+        orderService = new OrderServiceImpl(orderRepository);
 
 
     }
