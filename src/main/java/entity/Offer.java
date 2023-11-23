@@ -1,6 +1,7 @@
 package entity;
 
 import base.entity.BaseEntity;
+import entity.users.Expert;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,6 +25,9 @@ public class Offer extends BaseEntity<Long> {
     int Duration;
     @OneToOne(mappedBy = "offer")
     Order order;
+    @OneToOne
+    Expert expert;
+
 
 
 }
